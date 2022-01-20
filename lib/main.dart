@@ -108,7 +108,10 @@ class Story1 extends StatelessWidget {
                 child: TextButton(
                   style: TextButton.styleFrom(backgroundColor: Colors.indigo.shade500),
                   onPressed: () {
-
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Story2()),
+                    );
                   },
                   child:Text("Au moins il est honnête. Vous montez ! ",
                       style: TextStyle(color: Colors.white,)
@@ -122,7 +125,10 @@ class Story1 extends StatelessWidget {
                 child: TextButton(
                   style: TextButton.styleFrom(backgroundColor: Colors.indigo.shade500),
                   onPressed: () {
-
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Story3()),
+                    );
                   },
                   child:Text( "Attends, mais je sais comment changer un pneu voyons !",
                       style: TextStyle(color: Colors.white,)
@@ -196,5 +202,68 @@ class Story2 extends StatelessWidget {
     );
   }
 }
+class Story3 extends StatelessWidget {
+  const Story3 ({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.indigo.shade300,
+      appBar: AppBar(
+        backgroundColor: Colors.indigo.shade400,
+        title: Center(
+            child: const Text('Destiny')
+        ),
+      ),
+      body: Center(
+        child:
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(
+              flex: 5,
+              child: Center(
+                child: Text( " Woaw ! Quelle évasion ! ",
+                  style: TextStyle(color: Colors.white,fontSize: 25.0),textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+            Expanded(
+              child:Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: TextButton(
+                  style: TextButton.styleFrom(backgroundColor: Colors.indigo.shade500),
+                  onPressed: () {
+
+                  },
+                  child:Text("Recommencer",
+                      style: TextStyle(color: Colors.white,)
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              child:Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: TextButton(
+                  style: TextButton.styleFrom(backgroundColor: Colors.indigo.shade500),
+                  onPressed: () {
+
+                  },
+                  child:Text("",
+                      style: TextStyle(color: Colors.white,)
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+
 
 
