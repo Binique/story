@@ -42,7 +42,10 @@ class Story extends StatelessWidget {
                 child: TextButton(
                   style: TextButton.styleFrom(backgroundColor: Colors.indigo.shade500),
                   onPressed: () {
-
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Story2()),
+                    );
                   },
                   child:Text('Vous lui remerciez et vous montez dans la voiture',
                       style: TextStyle(color: Colors.white,)
@@ -133,3 +136,65 @@ class Story1 extends StatelessWidget {
     );
   }
 }
+class Story2 extends StatelessWidget {
+  const Story2 ({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.indigo.shade300,
+      appBar: AppBar(
+        backgroundColor: Colors.indigo.shade400,
+        title: Center(
+            child: const Text('Destiny')
+        ),
+      ),
+      body: Center(
+        child:
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(
+              flex: 5,
+              child: Center(
+                child: Text("Lorsqu'il commence à conduire, il vous demande d'ouvrir la boite à gant. À l’intérieur, vous trouverez un couteau ensanglanté, deux doigts coupés et un CD de T-Matt.",
+                  style: TextStyle(color: Colors.white,fontSize: 25.0),textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+            Expanded(
+              child:Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: TextButton(
+                  style: TextButton.styleFrom(backgroundColor: Colors.indigo.shade500),
+                  onPressed: () {
+
+                  },
+                  child:Text("J'adore T-Matt, je lui donne le CD.",
+                      style: TextStyle(color: Colors.white,)
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              child:Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: TextButton(
+                  style: TextButton.styleFrom(backgroundColor: Colors.indigo.shade500),
+                  onPressed: () {
+
+                  },
+                  child:Text(" C'est lui ou moi, je prends le couteau et je le poignarde.",
+                      style: TextStyle(color: Colors.white,)
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
