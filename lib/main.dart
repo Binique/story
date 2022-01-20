@@ -241,6 +241,7 @@ class Story3 extends StatelessWidget {
                   style: TextButton.styleFrom(backgroundColor: Colors.indigo.shade500),
                   onPressed: () {
                     Navigator.pop(context);
+                    Navigator.pop(context);
                   },
                   child:Text("Recommencer",
                       style: TextStyle(color: Colors.white,)
@@ -287,6 +288,7 @@ class Story4 extends StatelessWidget {
                   style: TextButton.styleFrom(backgroundColor: Colors.indigo.shade500),
                   onPressed: () {
                     Navigator.pop(context);
+                    Navigator.pop(context);
                   },
                   child:Text("Recommencer",
                       style: TextStyle(color: Colors.white,)
@@ -332,6 +334,7 @@ class Story5 extends StatelessWidget {
                 child: TextButton(
                   style: TextButton.styleFrom(backgroundColor: Colors.indigo.shade500),
                   onPressed: () {
+                    Navigator.pop(context);
                     Navigator.pop(context);
                   },
                   child:Text("Recommencer",
