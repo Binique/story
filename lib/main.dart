@@ -174,7 +174,10 @@ class Story2 extends StatelessWidget {
                 child: TextButton(
                   style: TextButton.styleFrom(backgroundColor: Colors.indigo.shade500),
                   onPressed: () {
-
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Story5()),
+                    );
                   },
                   child:Text("J'adore T-Matt, je lui donne le CD.",
                       style: TextStyle(color: Colors.white,)
@@ -325,6 +328,77 @@ class Story4 extends StatelessWidget {
     );
   }
 }
+class Story5 extends StatelessWidget {
+  const Story5 ({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.indigo.shade300,
+      appBar: AppBar(
+        backgroundColor: Colors.indigo.shade400,
+        title: Center(
+            child: const Text('Destiny')
+        ),
+      ),
+      body: Center(
+        child:
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(
+              flex: 5,
+              child: Center(
+                child: Text(  "Vous vous faites un bon dalon et vous chantez le dernier son de T-matt ensemble. Il vous dépose à Cambaie et il vous demande si vous connaissez un bon endroit pour jeter un corps.",
+                  style: TextStyle(color: Colors.white,fontSize: 25.0),textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+            Expanded(
+              child:Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: TextButton(
+                  style: TextButton.styleFrom(backgroundColor: Colors.indigo.shade500),
+                  onPressed: () {
+
+                  },
+                  child:Text("Recommencer",
+                      style: TextStyle(color: Colors.white,)
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              child:Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: TextButton(
+                  style: TextButton.styleFrom(backgroundColor: Colors.indigo.shade500),
+                  onPressed: () {
+
+                  },
+                  child:Text("",
+                      style: TextStyle(color: Colors.white,)
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
