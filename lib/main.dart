@@ -240,23 +240,9 @@ class Story3 extends StatelessWidget {
                 child: TextButton(
                   style: TextButton.styleFrom(backgroundColor: Colors.indigo.shade500),
                   onPressed: () {
-
+                    Navigator.pop(context);
                   },
                   child:Text("Recommencer",
-                      style: TextStyle(color: Colors.white,)
-                  ),
-                ),
-              ),
-            ),
-            Expanded(
-              child:Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: TextButton(
-                  style: TextButton.styleFrom(backgroundColor: Colors.indigo.shade500),
-                  onPressed: () {
-
-                  },
-                  child:Text("",
                       style: TextStyle(color: Colors.white,)
                   ),
                 ),
